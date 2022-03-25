@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols:wght@300&display=swap');
+* {
+
+}
+body {
+  background: linear-gradient(-45deg, #eed752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+h1 {
+  color: rgb(36, 36, 36);
+  margin-left: 0px;
+  font-family: 'Bakbak One';
+  font-size: 52px;
+  text-align: center;
+}
+
+p{
+  margin:0;
+  padding: 0;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.box1 p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  color: rgb(0, 0, 0);
+  margin:0;
+  padding:0;
+  display:inline-block;
+}
+
+.box1 p#text{
+  font-weight:500;
+  margin:10px 0 0 0;
+  padding:0;
+  font-size:15px;
+}
+
+.box1 p#real{
+  font-weight:500;
+  margin:0;
+  padding:0 0 0 10px;
+  font-size:15px;
+  position:relative;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background:rgba(204, 204, 204, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.box1:hover {
+  opacity: 0.6;
+}
+
+input {
+  -webkit-appearance: none;
+  padding: 10px 10px 10px 10px;
+  width: 100px;
+  border-radius: 45px;
+  border: 1px solid rgba(80, 80, 80, 0.7);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  outline: none;
+}
+
+.box2 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background:rgba(204, 204, 204, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 1150px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background:rgba(204, 204, 204, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background:rgba(204, 204, 204, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+  }
+
+}
